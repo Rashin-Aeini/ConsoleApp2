@@ -15,10 +15,10 @@ namespace ConsoleApp2
             {
 
                 Console.WriteLine("---- Menu ----"
-                                  + "\n1. jam"
-                                  + "\n2. kam"
-                                  + "\n3. Zarb"
-                                  + "\n4. taghsim"
+                                  + "\n1. add"
+                                  + "\n2. minus"
+                                  + "\n3. multiply"
+                                  + "\n4. divided"
                                   + "\n9. Exit\n"
                                   );
 
@@ -27,19 +27,19 @@ namespace ConsoleApp2
                 switch (selection)
                 {
                     case 1:
-                        jam();
+                        add();
                         break;
 
                     case 2:
-                        kam();
+                        minus();
                         break;
 
                     case 3:
-                        zarb();
+                        multiply();
                         break;
 
                     case 4:
-                        taghsim();
+                        divided();
                         break;
 
                     case 9:
@@ -56,7 +56,7 @@ namespace ConsoleApp2
 
 
         }
-        static void jam()
+        static void add()
         {
             float a, b;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -69,7 +69,7 @@ namespace ConsoleApp2
             Console.WriteLine("{0}+ {1}={2}", a, b, a + b);
         }
 
-        static void kam()
+        static void minus()
         {
             float a, b;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -82,7 +82,7 @@ namespace ConsoleApp2
             Console.WriteLine("{0}+ {1}={2}", a, b, a - b);
         }
 
-        static void zarb()
+        static void multiply()
         {
             float a, b;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -95,7 +95,7 @@ namespace ConsoleApp2
             Console.WriteLine("{0}+ {1}={2}", a, b, a * b);
         }
 
-        static void taghsim()
+        static void divided()
         {
             float a, b;
             Console.ForegroundColor = ConsoleColor.Green;
