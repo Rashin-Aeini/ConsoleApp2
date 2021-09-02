@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace ConsoleApp2
+namespace Calculator
+
 {
     class Program
     {
@@ -15,10 +16,10 @@ namespace ConsoleApp2
             {
 
                 Console.WriteLine("---- Menu ----"
-                                  + "\n1. add"
-                                  + "\n2. minus"
-                                  + "\n3. multiply"
-                                  + "\n4. divided"
+                                  + "\n1. Add"
+                                  + "\n2. Minus"
+                                  + "\n3. Multiply"
+                                  + "\n4. Divided"
                                   + "\n9. Exit\n"
                                   );
 
@@ -27,24 +28,24 @@ namespace ConsoleApp2
                 switch (selection)
                 {
                     case 1:
-                        add();
+                        Add();
                         break;
 
                     case 2:
-                        minus();
+                        Minus();
                         break;
 
                     case 3:
-                        multiply();
+                        Multiply();
                         break;
 
                     case 4:
-                        divided();
+                        Divided();
                         break;
 
                     case 9:
                         keepLooping = false;
-                        Console.WriteLine("Thanks for youring this program.");
+                        Console.WriteLine("Thanks for touring this program.");
                         break;
 
                     default:
@@ -56,7 +57,7 @@ namespace ConsoleApp2
 
 
         }
-        static void add()
+        static void Add()
         {
             float a, b;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -69,7 +70,7 @@ namespace ConsoleApp2
             Console.WriteLine("{0}+ {1}={2}", a, b, a + b);
         }
 
-        static void minus()
+        static void Minus()
         {
             float a, b;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -79,10 +80,10 @@ namespace ConsoleApp2
             b = float.Parse(Console.ReadLine());
 
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("{0}+ {1}={2}", a, b, a - b);
+            Console.WriteLine("{0}-{1}={2}", a, b, a - b);
         }
 
-        static void multiply()
+        static void Multiply()
         {
             float a, b;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -92,10 +93,10 @@ namespace ConsoleApp2
             b = float.Parse(Console.ReadLine());
 
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("{0}+ {1}={2}", a, b, a * b);
+            Console.WriteLine("{0}*{1}={2}", a, b, a * b);
         }
 
-        static void divided()
+        static void Divided()
         {
             float a, b;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -107,7 +108,7 @@ namespace ConsoleApp2
             Console.ForegroundColor = ConsoleColor.White;
             if(b!=0)
             {
-                Console.WriteLine("{0}+ {1}={2}", a, b, a / b);
+                Console.WriteLine("{0}/{1}={2}", a, b, a / b);
             }
             
         }
